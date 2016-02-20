@@ -18,5 +18,5 @@ For more information on acts_as_abusable, see http://github.com/linkingpaths/act
   s.rubyforge_project = %q{acts_as_abusable}
   s.rubygems_version = %q{1.2.0}
   s.summary = %q{Tiny plugin to mark any rails model instance as an abuse or site's community guideline violation.}
-
+  s.add_development_dependency "rspec"
 end
