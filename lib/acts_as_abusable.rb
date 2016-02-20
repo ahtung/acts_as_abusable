@@ -10,15 +10,7 @@ module LinkingPaths
              
       module ClassMethods
         def acts_as_abusable
-          has_many :reported_abuses, :class_name => 'Abuse', :as => :resource do
-            def confirmed
-             find(:all, :conditions => ["confirmed = ?", true])
-            end
-            def pending
-             find(:all, :conditions => ["confirmed = ?", false])
-            end
-          end
-        
+          has_many :reported_abuses, class_name: 'Abuse', as: :resource
           include LinkingPaths::Acts::Abusable::InstanceMethods
         end                   
       end
